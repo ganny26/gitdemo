@@ -1,0 +1,86 @@
+
+body {
+  color: black !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  overflow: hidden;
+}
+
+
+@font-face {
+  font-family: 'wa2do';
+  src:  url('wa2do.eot?drkk0r');
+  src:  url('wa2do.eot?drkk0r#iefix') format('embedded-opentype'),
+    url('wa2do.ttf?drkk0r') format('truetype'),
+    url('wa2do.woff?drkk0r') format('woff'),
+    url('wa2do.svg?drkk0r#wa2do') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wa2do' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrows:before {
+  content: "\e907";
+}
+.icon-check:before {
+  content: "\e908";
+}
+.icon-wa2do_black:before {
+  content: "\e909";
+}
+.icon-cook_wa2cook:before {
+  content: "\e905";
+}
+.icon-wa2_wa2cook:before {
+  content: "\e906";
+}
+.icon-DO_font:before {
+  content: "\e904";
+}
+.icon-WA2:before {
+  content: "\e903";
+}
+.icon-Logo_HQ:before {
+  content: "\e900";
+}
+.icon-doit:before {
+  content: "\e901";
+}
+.icon-ndoit:before {
+  content: "\e902";
+}
+
+
+.font-ic-style{
+  font-size: 30px;
+  color: blueviolet;
+
+}
+
+.languagedd{
+  position: relative;
+  top: -22px;
+  bottom: 22px;
+  right: 10px;
+  margin-right: 5%;
+}
+
+.languagebtn{
+  width: 200px !important;
+  border-radius: 30px !important;
+}
