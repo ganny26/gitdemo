@@ -6,6 +6,7 @@ class IFrameComponent extends PureComponent {
   render() {    
     return React.createElement("iframe",{
         ref: "iframe",
+        id:"wa2frame",
         src: this.props.url,
         style: Object.assign({}, {
         border:"0",
