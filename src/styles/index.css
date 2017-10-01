@@ -72,15 +72,32 @@ body {
 
 }
 
-.languagedd{
-  position: relative;
-  top: -22px;
-  bottom: 22px;
-  right: 10px;
-  margin-right: 5%;
+
+
+.player-control{
+  text-align: center;
+}
+.articlebtn{
+  width: 200px !important;
+  margin-top: 10px;
+  border-radius: 30px !important;
 }
 
-.languagebtn{
-  width: 200px !important;
-  border-radius: 30px !important;
+.reading_progress {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 9000;
+}
+
+.reading_progress_bar {
+  height: 100%;
+  width: 0;
+  background-color: orange;
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
 }
