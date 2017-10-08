@@ -21,7 +21,7 @@ class ProgressBar extends Component {
     }
     return (
       <div className="reading_progress">
-        <div className="reading_progress_bar indeterminate" style={pbstyle}></div>
+        <div className={`reading_progress_bar ${this.props.isintemediate ? 'indeterminate' : ''}`} style={pbstyle}></div>
       </div>
     );
   }
