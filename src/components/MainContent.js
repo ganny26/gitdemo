@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Icon from 'material-ui/Icon';
 
 import IframeComponent from './IframeComponent';
-
+import Helper from '../utils/helper';
 function InvalidURL() {
     console.log("Invalid URL")
     return (
@@ -39,11 +39,25 @@ class MainContent extends Component {
     }
 
     componentWillMount() {
+        console.log("COmponent will mount 1 ");
         this.setState({
             articleurl: this.getLocationUrl("articleurl")
         })
-
+      
         console.log('First componentWillMount', this.getLocationUrl("articleurl"));
+      
+    }
+
+    componentDidMount(){
+        let fetchurl= this.state.articleurl;
+        console.log("COmponent did mount 2 ",this.state.articleurl);
+        console.log("fetch url",fetchurl);
+        Helper.scrapHTML(fetchurl,function(d){
+            var ingred = d.replace(/\s/g, '');
+            //window.alert(d.replace(/\s/g, ''));
+            localStorage.setItem("ingredients",ingred)
+        });
+        
     }
 
 
@@ -51,7 +65,7 @@ class MainContent extends Component {
         return (
             <div>
                 {
-                    this.state.articleurl === undefined ? 
+                    this.state.articleurl === '' || this.state.articleurl === undefined ? 
                     <InvalidURL/> :
                     <IframeComponent
                         url={this.state.articleurl}
