@@ -6,25 +6,22 @@ class ProgressBar extends Component {
 
     super(props);
     this.state = {
-      pbWidth: 0
+      pbWidth: this.props.value
     };
   }
 
   componentDidMount() {
-    this.setScrollWidth();
+ 
   }
 
-  setScrollWidth() {
-    var totalScroll = 50;
 
-  }
   render() {
     let pbstyle = {
       width: this.state.pbWidth + '%'
     }
     return (
       <div className="reading_progress">
-        <div className="reading_progress_bar" style={pbstyle}></div>
+        <div className="reading_progress_bar indeterminate" style={pbstyle}></div>
       </div>
     );
   }
