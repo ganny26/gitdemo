@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import Icon from 'material-ui/Icon';
 
 import IframeComponent from './IframeComponent';
 
 function InvalidURL() {
     console.log("Invalid URL")
     return (
-        <div>
-            <h1>Error</h1>
+        <div className="error-widget">
+             <Icon color="error" style={{ fontSize: 85,textAlign:'center',marginLeft:50,marginRight:50}}>error_outline</Icon>
+            <div>
+            404. That’s an error.</div>
         </div>
     );
 }
@@ -23,7 +26,7 @@ class MainContent extends Component {
     getLocationUrl(name) {
         var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
         var results = regex.exec(window.location.href);
-        if (results != undefined) {
+        if (results !== undefined) {
             if (!results) return '';
             if (!results[2]) return '';
             return results[2].replace(/\+/g, " ");
@@ -47,12 +50,16 @@ class MainContent extends Component {
     render() {
         return (
             <div>
-                <IframeComponent
-                    url={this.state.articleurl}
-                    position="absolute"
-                    width="100%"
-                    height="100%"
-                />
+                {
+                    this.state.articleurl === undefined ? 
+                    <InvalidURL/> :
+                    <IframeComponent
+                        url={this.state.articleurl}
+                        position="absolute"
+                        width="100%"
+                        height="100%"
+                    />
+                }
             </div>);
     }
 }
