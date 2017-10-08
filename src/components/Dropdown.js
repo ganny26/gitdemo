@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import VoiceController from '../controller/voiceController';
+import VoiceController from '../controller/VoiceController';
 function DDList(props) {
     const options = props.option;
     const action = props.action;
@@ -27,7 +27,7 @@ function handleClick(e,act){
             break;
         }
         case 'LANGUAGE':{
-            VoiceController.setLanguage();
+            VoiceController.setLanguage(e);
             break;
         }
         case 'SPEED':{
