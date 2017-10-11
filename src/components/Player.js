@@ -3,7 +3,7 @@ import 'typeface-roboto';
 import Icon from 'material-ui/Icon';
 
 import Dropdown from './Dropdown';
-import AppConstants from './AppConstants';
+import AppConstants from '../utils/AppConstants';
 class Player extends Component {
     render() {
         let languageList = AppConstants.languagelist;
