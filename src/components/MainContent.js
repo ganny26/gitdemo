@@ -3,6 +3,7 @@ import Icon from 'material-ui/Icon';
 
 import IframeComponent from './IframeComponent';
 import Helper from '../utils/helper';
+import SpeechModel from '../shared/SpeechModel';
 function InvalidURL() {
     console.log("Invalid URL")
     return (
@@ -14,7 +15,7 @@ function InvalidURL() {
     );
 }
 class MainContent extends Component {
-
+  
     constructor(props) {
         super(props);
         this.state = {
@@ -55,7 +56,7 @@ class MainContent extends Component {
         Helper.scrapHTML(fetchurl,function(d){
             var ingred = d.replace(/\s/g, '');
             //window.alert(d.replace(/\s/g, ''));
-            localStorage.setItem("ingredients",ingred)
+            
         });
         
     }
