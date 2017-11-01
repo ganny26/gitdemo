@@ -10,7 +10,7 @@ let VoiceController = {
         this.speak(ingdata);
     },
     setLanguage: function (ev) {
-        console.log("Setting Language",ev);
+        console.log("Setting Language", ev);
     },
     setSpeed: function () {
         console.log("Setting speed");

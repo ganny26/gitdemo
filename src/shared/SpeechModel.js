@@ -20,7 +20,7 @@ class SpeechModel {
         return this._voice;
     }
 
-    setSpeed(){
+    setSpeed(speed){
         this._speed = speed;
     }
 
